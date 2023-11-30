@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelezBeatriz - Resultado</title>
+</head>
+<body>
+    <p>Estás buscando: <strong>{{query}}</strong></p>
+
+    {% if clientes %}
+
+        <p>Clientes relacionados: {{clientes|length}} clientes</p>
+
+        <ul>
+            {% for cliente in clientes %}
+                <li>
+                    {{cliente.nombre}} &nbsp; {{cliente.email}} &nbsp; {{cliente.telefono}}
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+
+        <p>No hay clientes relacionados...</p>
+    
+    {% endif %}
+</body>
+</html>
