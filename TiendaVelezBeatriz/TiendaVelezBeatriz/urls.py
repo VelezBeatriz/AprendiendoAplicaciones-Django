@@ -24,5 +24,6 @@ urlpatterns = [
     path('FormClientesBeatrizVelez/', views.busqueda_clientes),
     path('BuscarBeatrizVelez/', views.buscar),
     path('BuscarClientesBeatrizVelez/', views.buscarCliente),
+    path('contactoVelezBeatriz/', views.contacto)
 
 ]
